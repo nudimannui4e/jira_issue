@@ -10,7 +10,7 @@ https://jira.readthedocs.io/examples.html?highlight=jira.search_issues#searching
   * [Content](#content)
   * [Setup and Run](#setup-and-run)
   * [Authenticate](#authenticate)
-    * [Other:](#Other:)
+  * [Other:](#Other)
 
 ## Setup and Run
 Clone repository:
@@ -35,7 +35,7 @@ JIRA_URL=https://xxx
 JIRA_USER=login
 JIRA_PASS=password
 ```
-### Other:
+## Other
 Тут идет запрос через **JiraQueryLanguage**, как пример, можно взять запрос с самой Jira
 ![alt text](https://i.imgur.com/aeSDAlc.png)
 
