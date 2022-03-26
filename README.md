@@ -3,18 +3,26 @@
 
 https://pypi.org/project/jira/
 
+https://jira.readthedocs.io/examples.html?highlight=jira.search_issues#searching
+
 ## Content
 * [Python Jira](#python-jira)
   * [Content](#content)
   * [Setup and Run](#setup-and-run)
   * [Authenticate](#authenticate)
-    * [От себя:](#от-себя:)
-    
+    * [Other:](#other:)
+
 ## Setup and Run
 Clone repository:
 ```
 git clone https://github.com/nudimannui4e/python_jira.git
 cd python_jira
+```
+VirtualEnv install:
+```
+pip install virtualenv
+virtualenv venv
+source venv/bin/activate
 ```
 Установка зависимостей:
 ```
@@ -27,7 +35,7 @@ JIRA_URL=https://xxx
 JIRA_USER=login
 JIRA_PASS=password
 ```
-### От себя:
+### Other:
 Тут идет запрос через **JiraQueryLanguage**, как пример, можно взять запрос с самой Jira
 ![alt text](https://i.imgur.com/aeSDAlc.png)
 
