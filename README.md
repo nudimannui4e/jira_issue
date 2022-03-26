@@ -10,7 +10,7 @@ https://jira.readthedocs.io/examples.html?highlight=jira.search_issues#searching
   * [Content](#content)
   * [Setup and Run](#setup-and-run)
   * [Authenticate](#authenticate)
-    * [Other:](#other:)
+    * [Other:](#Other:)
 
 ## Setup and Run
 Clone repository:
