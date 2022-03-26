@@ -5,6 +5,13 @@ https://pypi.org/project/jira/
 
 https://jira.readthedocs.io/examples.html?highlight=jira.search_issues#searching
 
+```
+~/_git/python_jira (master) » python issue_list.py                                                                           
+https://jira.XXX.local/browse/XXX-221: livegamews-grpc: скорректировать hp
+https://jira.XXX.local/browse/XXX-222: Прошу предоставить доступ по ssh на все хосты linux
+https://jira.XXX.local/browse/XXX-223: RabbitMQ Shovel - допилить скрипт починки shovel, для массовой обработки
+```
+
 ## Content
 * [Python Jira](#python-jira)
   * [Content](#content)
