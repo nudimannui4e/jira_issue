@@ -26,4 +26,4 @@ oh_shit = jira.search_issues(jql_str='project = DUTYADMIN AND status in (Open, "
 
 
 for issue in oh_shit:
-    print('{}: {}'.format(os.getenv('JIRA_URL') + '/browse/' + issue.key, issue.fields.summary))
+    print('{} {}'.format(os.getenv('JIRA_URL') + '/browse/' + issue.key, issue.fields.summary))
