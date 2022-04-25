@@ -20,10 +20,21 @@ jira = JIRA(os.getenv('JIRA_URL'),
             basic_auth=(os.getenv('JIRA_USER'), os.getenv('JIRA_PASS')),
             options=dict(verify=False))
 
+def duty_admin():
+  # search issues by JiraQueryLang
+  oh_shit = jira.search_issues(jql_str='project = DUTYADMIN AND status in (Open, "On Approval", Research) AND resolution = Unresolved AND updated >= -100d AND assignee in (duty-admin) ORDER BY priority DESC, updated DESC')
+  print("DUTYADMIN issue:")
 
-# search issues by JiraQueryLang
-oh_shit = jira.search_issues(jql_str='project = DUTYADMIN AND status in (Open, "On Approval", Research) AND resolution = Unresolved AND updated >= -100d AND assignee in (currentUser(), duty-admin) ORDER BY priority DESC, updated DESC')
+  for issue in oh_shit:
+      print('{} {}'.format(os.getenv('JIRA_URL') + '/browse/' + issue.key, issue.fields.summary))
 
+def by_me_issue():
+  # search issues by JiraQueryLang
+  oh_shit = jira.search_issues(jql_str='project = DUTYADMIN AND status in (Open, "On Approval", Research) AND resolution = Unresolved AND updated >= -100d AND assignee in (currentUser()) ORDER BY priority DESC, updated DESC')
+  print(os.getenv('JIRA_USER') ,"issue:")
 
-for issue in oh_shit:
-    print('{} {}'.format(os.getenv('JIRA_URL') + '/browse/' + issue.key, issue.fields.summary))
+  for issue in oh_shit:
+      print('{} {}'.format(os.getenv('JIRA_URL') + '/browse/' + issue.key, issue.fields.summary))
+
+duty_admin()
+by_me_issue()
